@@ -1,0 +1,29 @@
+body { background-color: #000; color: #fff; margin: 0; }
+
+a:link, a:hover, a:active, a:visited { text-decoration: none; color: inherit;}
+
+h1, h2, h3, h4, h5, h6 { font-size: inherit; color: inherit; }
+
+ul, ol, li { text-decoration: none; margin: 0; padding: 0; }
+
+.l-font { font-size: 1.75rem; }
+
+/* Header */
+header { 
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/c0a32732-b033-43b3-be2a-8fee037a6146/eb295b7c-6aa7-4485-a3f5-0c61ee5f1434/KR-ko-20210607-popsignuptwoweeks-perspective_alpha_website_small.jpg); 
+    background-position: center; background-repeat: no-repeat; height: 500px;
+}
+.header_icon { position: absolute; top: 1.6em; left: 7%; }
+.header_nav { position: absolute; top: 1.6em; right: 7%; }
+.header_nav > div { display: inline-block; }
+.header_lang_select { font-size: 1.2rem; }
+.header_lang_select::before { content: '◍'; color: #fff; position: relative; left: 1.5em; top: 0.1em;}
+.header_lang_select > select { border: 1.8px solid #eee; border-radius: 4px; background-color: rgba(0, 0, 0, 0.5); color: #fff; padding: 7px 0.3rem 7px 1.3rem; line-height: 1.5rem; }
+.header_lang_select::after { content: '▼'; color: #fff; position: relative; right: 1.46em; top: 0.1em; font-size: inherit; }
+.header_login_button { background-color: #e50914; padding: 7px 17px; font-weight: 400; font-size: 1rem; border-radius: 3px;}
+.header_login_button { position: relative; top: 0.17em; right: 0.8em;}
+
+/* contents */
+#contenrs {height: 100%; margin: 0 auto; box-sizing: border-box; }
+
+/* email로 시작 */

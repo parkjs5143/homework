@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {width: 100%; margin: 0;background-color: gray; font-family: 'MaruBuri-Regular';}
+
+a:link {text-decoration: none; color: black;}
+a:hover {text-decoration: none; color: black;}
+a:visited {text-decoration: none; color: black;}
+
+ul { margin: 0; padding: 0; }
+ol { margin: 0; padding-left: 30px; }
+li { text-decoration: none;}
+
+h1 {text-align: center;}
+
+button {padding: 5px; border-radius: 10px; background-color: tomato; color: white; font-size: 18px;}
+button:active {background-color: #eee; color: #000;} 
+
+/* 공통부분 */
+.padding-10x10 {padding: 10px;}
+.align_center {text-align: center;}
+.color_back_gray {background-color: gray;}
+.color_back_white {background-color: white;}
+
+.wrap {background-color: white; padding-bottom: 3px;}
+.wrap > table { margin: 0px auto;}
+.button_wrap {text-align: center;}
+
+/* index.html */
+#main_menu { padding: 10% 0; }
+#main_menu li { display: inline-block; margin: 5% 2%;}
+#main_menu a {font-size: 30px; font-weight: bold; }
+#main_menu a:hover { color: rgb(216, 216, 216); text-shadow: 3px 3px 2px #000;}
+
+
+/* poetry.html */
+.poetry_line { white-space: nowrap; overflow: hidden; padding: 20px 0; margin: 0;}
+.contain1 { text-align: center;}
+.contain {padding: 20px; text-align: left;}
+.contain > h2 { margin: 0; padding: 20px; text-align: center;}
+.contain > ol {padding: 0 30px;}
+
+
+/* resume.html */
+[class *= "resume_tb"] caption { text-align: left; padding: 20px 0 5px 5px; font-weight: bold;}
+[class *= "resume_tb"] td {padding: 5px; border: 1px solid lightgray; height: 40px; }
+.resume_tb1 td {padding: 5px; border: 1px solid lightgray;}
+.resume_tb2 td:nth-child(odd) {text-align: center; font-weight: bold;}
+.resume_tb3 tr:first-child td:nth-child(odd) {text-align: center; font-weight: bold;}
+.resume_tb4 td {text-align: center;}
+.resume_tb4 tr:first-child {font-weight: bold;}
+
+/* site.html */
+.site_table a:hover {text-shadow: 1px 1px 1px cadetblue;}
+
+.site_table th {border: 1px dotted rgb(8, 3, 3); font-size: 150%; padding: 20px 0;}
+.site_table td {padding: 15px 10px;}
+.site_table td:nth-child(odd) {text-align: center; font-weight: bold; background-color: lightgray;}
+
+/* market.html */
+.wrap{text-align: center;}
+.market_photo { padding-top: 1em;}
+.market_check_box { width: 740px; border: 1px solid gray; margin: 0 auto;}
+.market_check_box h1 { background-color: black; color: white; font-size: 1em; padding: 10px; margin: 0; }
+.market_check_box h2 { color:#f00; font-size: 1.2em; text-align: center; }
+.market_check_box p { font-size: 1.5em; text-align: center; font-weight: bold; line-height: 2em; }
+.market_check_box .accent { color: #00f; }
+.market_check_box .smalltext { font-size: 0.7em; }
+
+/* sitemap */
+#sitemap { padding: 5% 0;}
+#sitemap > table { margin: 25px auto; border-collapse: collapse; }
+#sitemap caption { padding: 25px 0 5px 0; font-weight: bold; font-size: 1.2em; }
+#sitemap td { border: 1px solid lightgray; padding: 0.3em 3em;}
+#sitemap a { text-decoration: underline; color: blue; }
+#sitemap a:hover, #sitemap a:active { color: #fff; text-shadow: 1px 1px 1px cornflowerblue;}
+
