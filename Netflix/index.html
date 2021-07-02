@@ -11,6 +11,7 @@
 <body>
     <div id="wrap">
         <!--header 시작-->
+        <div class="background_img"></div>
         <header>
             <div class="header_icon">
                 <a href="#"><img src="./image/header_logo.png" alt="Netflix"></a>
@@ -28,65 +29,90 @@
         <!--contents 시작-->
         <div id="contents">
             <!--email로 시작 부분-->
-            <div id="email_start">
+            <div id="email">
                 <p class="l-font">영화, TV 프로그램을 무제한으로.</p>
                 <p class="m-font">다양한 디바이스에서 시청하세요. 언제든 해지하실 수 있습니다.</p>
                 <p class="s-font">시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
-                <input type="email" name="email" id="email">
-                <div><a href="#">시작하기 ></a></div>
+                <input type="email" name="email" placeholder="이메일 주소">
+                <div class="start_button">
+                    <button type="submit" value="">시작하기 ></button>
+                </div>
             </div>
             <!--tv 시청하기 부분 시작-->
-            <div id="tv">
+            <div id="tv_start">
                 <p class="l-font">TV로 즐기세요.</p>
-                <p class="m-font">스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
+                <p class="s-font">스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
                 <div class="img_cont">
                     <img src="./image/tv.png" alt="tv">
-                    <video class="our-story-card-video" autoplay="" playsinline="" muted="" loop="">
+                    <video class="storycard_video" autoplay="" playsinline="" muted="" loop="">
                         <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4">
                     </video>
                 </div>
             </div>
-            <!--저장하기 시작-->
-            <div id="store">
+            <!-- 즐겨찾기로 저장하기 시작-->
+            <div id="store_start">
                 <p class="l-font">즐겨 보는 콘텐츠를 저장해 오프라인으로 시청하세요.</p>
-                <p class="m-font">간편하게 저장하고 빈틈없이 즐겨보세요.</p>
-                <div class="our-story-card-animation-container">
-                    <img alt="" class="our-story-card-img" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" data-uia="our-story-card-img">
-                    <div class="our-story-card-animation">
-                        <div class="our-story-card-animation-image">
-                            <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png">
-                        </div>
-                        <div class="our-story-card-animation-text">
-                            <div id="" class="text-0" data-uia="">기묘한 이야기</div>
-                            <div id="" class="text-1" data-uia="">저장 중...</div>
-                        </div>
-                    </div>
+                <p class="s-font">간편하게 저장하고 빈틈없이 즐겨보세요.</p>
+                <div class="img_cont">
+                    <img src="./image/storycard_img.png" alt="storycard image">
                 </div>
             </div>
             <!--여러대에서 시청 부분-->
-            <div id="multi">
-
+            <div id="multi_start">
+                <p class="l-font">다양한 디바이스에서 시청하세요.</p>
+                <p class="s-font">각종 영화와 TV프로그램을 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요. 추가 요금이 전혀 없습니다.</p>
+                <div class="img_cont">
+                    <video class="storycard_video" autoplay="" playsinline="" muted="" loop="">
+                        <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4">
+                    </video>
+                    <img alt="storycard_img" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png">
+                </div>
             </div>
-            <!--어린이채널 시작-->
-            <div id="kids">
-
+            <!--키즈채널 시작-->
+            <div id="kids_start">
+                <p class="l-font">어린이 전용 프로필을 만들어 보세요.</p>
+                <p class="s-font">자기만의 공간에서 좋아하는 캐릭터와 즐기는 신나는 모험. 자녀에게 이 특별한 경험을 선물하세요. 넷플릭스 회원이라면 무료입니다.</p>
+                <div class="img_cont">
+                    <img alt="storycard_img" src="https://occ-0-988-1007.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABTyynLTvOBU46RmBnCIPyjAryrXCZKImpoXdp7Mz54jVGKnBQ1X84bzR-3vtD-RA4uu2b1FjrDgfxE6KElG14WAXW19X.png?r=acf" data-uia="our-story-card-img">
+                </div>
             </div>
             <!--질문부분 시작-->
-            <div id="questions">
-
+            <div id="question">
+                <p class="l-font">자주 묻는 질문</p>
+                <ul class="qua_list">
+                    <li><a href="#">넷플릭스란 무엇인가요?</a></li>
+                    <li><a href="#">넷플릭스 요금은 얼마인가요?</a></li>
+                    <li><a href="#">어디에서 시청할 수 있나요?</a></li>
+                    <li><a href="#">멤버십을 해지하려면 어떻게 하나요?</a></li>
+                    <li><a href="#">넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?</a></li>
+                    <li><a href="#">아이들이 넷플릭스를 봐도 좋을까요?</a></li>
+                </ul>
+                <div class="email_cont">
+                    <p class="s-font">시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
+                    <input type="email" name="email" placeholder="이메일 주소">
+                    <div class="start_button">
+                        <button type="submit" value="">시작하기 ></button>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- footer 시작 -->
         <footer>
             <!--footer list 부분-->
             <div class="foot_1">
                 <div class="call">질문이 있으신가요? 문의 전화: 00-308-321-0058</div>
-                <ul class="foot_list">
+            </div>
+            <div class="foot_list">
+                <ul>
                     <li><a href="#">자주 묻는 질문</a></li>
                     <li><a href="#">고객 센터</a></li>
                     <li><a href="#">계정</a></li>
                     <li><a href="#">미디어 센터</a></li>
                     <li><a href="#">투자 정보(IR)</a></li>
                     <li><a href="#">입사 정보</a></li>
+                    <li><a href="#">넷플릭스 지원 디바이스</a></li>
+                    <li><a href="#">이용 약관</a></li>
+                    <li><a href="#">개인정보</a></li>
                     <li><a href="#">쿠키 설정</a></li>
                     <li><a href="#">회사 정보</a></li>
                     <li><a href="#">문의하기</a></li>
@@ -103,7 +129,7 @@
                 </select>
             </div>
             <!--copy 부분-->
-            <div copy_text>
+            <div class="copy_text">
                 <h2>넷플릭스 대한민국</h2>
                 <p>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 00-308-321-0058</p>
                 <p>대표: 레지널드 숀 톰프슨</p>

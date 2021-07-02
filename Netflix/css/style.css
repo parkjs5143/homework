@@ -1,29 +1,139 @@
 body { background-color: #000; color: #fff; margin: 0; }
 
-a:link, a:hover, a:active, a:visited { text-decoration: none; color: inherit;}
+a:link, a:hover, a:active, a:visited { text-decoration: none; color: inherit; }
 
-h1, h2, h3, h4, h5, h6 { font-size: inherit; color: inherit; }
+h1, h2, h3, h4, h5, h6, p { font-size: inherit; color: inherit; margin: 0; }
 
-ul, ol, li { text-decoration: none; margin: 0; padding: 0; }
+ul, ol, li { list-style: none; text-decoration: none; margin: 0; padding: 0; }
 
-.l-font { font-size: 1.75rem; }
+.l-font { font-size: 1.75rem; font-weight: bold; }
+.m-font { font-size: 1.1em; margin: 0.5rem; margin-top: 1rem; }
+.s-font { font-size: 1.1em; margin: 1rem;}
+
+img, video { width: 100%; }
+
+/* 이메일 input */
+input[type="email"] { height: 3.5em; padding: 0.5em 0.5em 0; width: 100%; box-sizing: border-box;}
+
+/* 시작하기 버튼 */
+.start_button { margin-top: 1em; }
+.start_button > button { 
+    padding: 0.6em 1.2em; font-size: 1em; background-color: #e50914; 
+    border: none; border-radius: 3px; color: #fff;
+}
 
 /* Header */
-header { 
-    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/c0a32732-b033-43b3-be2a-8fee037a6146/eb295b7c-6aa7-4485-a3f5-0c61ee5f1434/KR-ko-20210607-popsignuptwoweeks-perspective_alpha_website_small.jpg); 
-    background-position: center; background-repeat: no-repeat; height: 500px;
+.background_img { 
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/c0a32732-b033-43b3-be2a-8fee037a6146/eb295b7c-6aa7-4485-a3f5-0c61ee5f1434/KR-ko-20210607-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+    background-position: center; background-repeat:no-repeat; background-size: cover; height: 70%; width: 100%; z-index: -100;
+    position: absolute; top: 0; left: 0;
 }
-.header_icon { position: absolute; top: 1.6em; left: 7%; }
-.header_nav { position: absolute; top: 1.6em; right: 7%; }
+header > div { z-index: 500; }
+.header_icon { position: absolute; top: 1.2em; left: 2%; }
+.header_nav { position: absolute; top: 1.2em; right: 2%; }
 .header_nav > div { display: inline-block; }
-.header_lang_select { font-size: 1.2rem; }
+.header_lang_select { font-size: 0.9rem; }
 .header_lang_select::before { content: '◍'; color: #fff; position: relative; left: 1.5em; top: 0.1em;}
-.header_lang_select > select { border: 1.8px solid #eee; border-radius: 4px; background-color: rgba(0, 0, 0, 0.5); color: #fff; padding: 7px 0.3rem 7px 1.3rem; line-height: 1.5rem; }
-.header_lang_select::after { content: '▼'; color: #fff; position: relative; right: 1.46em; top: 0.1em; font-size: inherit; }
-.header_login_button { background-color: #e50914; padding: 7px 17px; font-weight: 400; font-size: 1rem; border-radius: 3px;}
-.header_login_button { position: relative; top: 0.17em; right: 0.8em;}
+.header_lang_select > select { 
+    border: 1.8px solid #fff; border-radius: 2px; font-size: inherit;
+    background-color: rgba(0, 0, 0, 0.5); color: #fff; 
+    padding: 0.2em 0.3rem 0.3em 1.3rem; line-height: 1.5rem; 
+}
+.header_lang_select::after { content: '▼'; color: #fff; position: relative; right: 1.6em; top: 0.1em; font-size: inherit; }
+.header_login_button { background-color: #e50914; padding: 0.3em; font-weight: 400; border-radius: 3px;}
+.header_login_button { position: relative; top: 0.16em; right: 0.8em;}
+
 
 /* contents */
-#contenrs {height: 100%; margin: 0 auto; box-sizing: border-box; }
+#contents { 
+    position: relative; box-sizing: border-box; padding-top: 3em; z-index: 100; 
+    text-align: center; word-break: keep-all; background: rgba(0, 0, 0, 0.5);
+}
+#contents > div[id*="start"] { padding: 5em 1em 3em; }
+#contents > div { border-bottom: 0.5em solid #222; }
 
-/* email로 시작 */
+/* email */
+#email { padding: 5em 1em; }
+
+/* tv 시청 */
+#tv_start > .m-font { margin: 0.2rem; }
+.img_cont { position: relative; }
+.img_cont { position: relative;}
+.img_cont > video { 
+    max-width: 66%;
+    max-height: 54%;
+    position: absolute;
+    top: 24%;
+    left: 17%; 
+    z-index: -10;
+}
+
+/* 즐겨찾기로 저장하기 */
+.img_cont { padding: 1em; }
+
+/* 여러대에서 시청하기 */
+.multi_start > img_cont { height: fit-content; }
+.storycard_img { z-index: 300; }
+#multi_start .storycard_video { 
+    max-width: 59%;
+    max-height: 59%;
+    position: absolute;
+    top: 13%;
+    left: 20%; z-index: -10; 
+}
+
+/* 키즈채널 */
+
+
+/* 질문 부분 */
+#question { padding: 5em 0 3em; border-bottom: 0.5em solid #222; }
+#question > ul { text-align: left; margin: 1.5em 0; font-size: 1.1em; }
+#question > ul > li { background-color: #303030; margin: 0.5em 0; padding: .8em 2.2em .8em 1.2em; position: relative; }
+#question > ul > li::after { content: '+'; position: absolute; right: 5%; font-size: 1.5em; top: 10%; }
+#question .email_cont { padding: 0 1em;}
+
+
+/* footer */
+footer { padding: 2em; color: #757575; line-height: 1em; }
+footer > div { margin-bottom: 1.5em; }
+footer ul, footer p { font-size: 0.8em; }
+.foot_list > ul { width: 100%; margin: 0; padding: 0; }
+.foot_list > ul > li { display: inline-block; width: 48%; margin-bottom: 1em;}
+
+
+/* 한/영 선택 */
+.foot_lang_select { font-size: 1.1rem; position: relative;}
+.foot_lang_select::before { content: '◍'; color: #999; position: relative; left: 1.7em; top: 0.1em; font-size: inherit;}
+.foot_lang_select > select { 
+    border: 1.8px solid #333; border-radius: 2px; font-size: inherit;
+    background-color: rgba(0, 0, 0, 0.5); color: #999; 
+    padding: 0.5em 0.5rem 0.5em 1.7rem; line-height: 1.5rem; 
+}
+.foot_lang_select::after { content: '▼'; color: #999; position: relative; right: 1.6em; top: 0.1em; font-size: inherit; }
+
+
+/* copyright */
+.copy_text h2 { margin-bottom: 1em; }
+.copy_text p { line-height: 1.5;}
+
+
+
+
+/* 태블릿, pc버전 */
+@media screen and (min-width: 730px){
+
+    .l-font { font-size: 3.125rem; font-weight: bold; }
+    .m-font { font-size: 1.625rem; margin: 0.5rem; margin-top: 1rem; }
+    .s-font { font-size: 1.1em; margin: 1rem;}
+
+    img, video { width: 100%; }
+
+    /* 이메일 input */
+    input[type="email"] { height: 3.5em; padding: 0.5em 0.5em 0; width: 100%; box-sizing: border-box;}
+
+    /* contents */
+    #contents { padding-top: 7em;}
+
+    /* email */
+    
+}
