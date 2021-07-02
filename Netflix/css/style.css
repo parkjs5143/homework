@@ -12,6 +12,8 @@ ul, ol, li { list-style: none; text-decoration: none; margin: 0; padding: 0; }
 
 img, video { width: 100%; }
 
+button:hover { cursor: pointer; }
+
 /* 이메일 input */
 input[type="email"] { height: 3.5em; padding: 0.5em 0.5em 0; width: 100%; box-sizing: border-box;}
 
@@ -49,7 +51,7 @@ header > div { z-index: 500; }
     position: relative; box-sizing: border-box; padding-top: 3em; z-index: 100; 
     text-align: center; word-break: keep-all; background: rgba(0, 0, 0, 0.5);
 }
-#contents > div[id*="start"] { padding: 5em 1em 3em; }
+#contents > div[id*="start"] { padding: 5em 1em 3em; position: relative;}
 #contents > div { border-bottom: 0.5em solid #222; }
 
 /* email */
@@ -88,8 +90,9 @@ header > div { z-index: 500; }
 /* 질문 부분 */
 #question { padding: 5em 0 3em; border-bottom: 0.5em solid #222; }
 #question > ul { text-align: left; margin: 1.5em 0; font-size: 1.1em; }
-#question > ul > li { background-color: #303030; margin: 0.5em 0; padding: .8em 2.2em .8em 1.2em; position: relative; }
+#question > ul > li { background-color: #303030; margin: 0.5em 0; padding: 0; position: relative; }
 #question > ul > li::after { content: '+'; position: absolute; right: 5%; font-size: 1.5em; top: 10%; }
+#question > ul > li p { padding: .8em 2.2em .8em 1.2em; }
 #question .email_cont { padding: 0 1em;}
 
 
@@ -119,21 +122,75 @@ footer ul, footer p { font-size: 0.8em; }
 
 
 
-/* 태블릿, pc버전 */
-@media screen and (min-width: 730px){
+/* 태블릿 버전 */
+@media all and (min-width: 730px) and (max-width: 1000px){
 
-    .l-font { font-size: 3.125rem; font-weight: bold; }
-    .m-font { font-size: 1.625rem; margin: 0.5rem; margin-top: 1rem; }
-    .s-font { font-size: 1.1em; margin: 1rem;}
+    .l-font { font-size: 2.6rem; font-weight: bold; }
+    .m-font { font-size: 1.625rem; margin: 0.5rem 5%; margin-top: 1rem; }
+    .s-font { font-size: 1.3em; margin: 0.5rem 5%;}
 
-    img, video { width: 100%; }
+    .img_cont { width: 70%; margin: 0 auto;}
+
+    /* 시작하기 버튼 */
+    .start_button { margin-top: 1.3em; }
+    .start_button > button { 
+        padding: 0.6em 1.2em; font-size: 1em; background-color: #e50914; 
+        border: none; border-radius: 3px; color: #fff;
+    }
+
+    .background_img { height: 700px; }
 
     /* 이메일 input */
-    input[type="email"] { height: 3.5em; padding: 0.5em 0.5em 0; width: 100%; box-sizing: border-box;}
+    input[type="email"] { height: 3.5em; padding: 0.5em 0.5em 0; width: 100%; box-sizing: border-box; }
 
     /* contents */
-    #contents { padding-top: 7em;}
+    #contents { padding-top: 7em; }
+    #contents > div { padding: 5em 15% 3em; }
 
-    /* email */
-    
+    /* email 가입하기 */
+    #email .l-font { font-size: 3.1rem; }
+    #email .s-font { padding: 1rem 2rem; }
+}
+
+/* pc 버전 */
+@media all and (min-width: 1001px) {
+
+    .l-font { font-size: 3rem; font-weight: bold; }
+    .m-font { font-size: 1.625rem; margin: 1rem 0; margin-top: 1rem; }
+    .s-font { font-size: 1.3em; margin: 1rem 0;}
+
+    .img_cont { width: 30rem; position: relative;}
+
+    /* input 이메일 */
+    input[type="email"] { 
+        padding-left: 1em; font-size: 1.1em; }
+
+    /* 시작하기 버튼 */
+    .start_button { margin-top: 2em; }
+    .start_button > button { 
+        padding: 0.6em 1.2em; font-size: 1.2em; background-color: #e50914; 
+        border: none; border-radius: 3px; color: #fff;
+    }
+
+    .background_img { height: 130%;}
+
+    /* contents */
+    #contents { padding-top: 7em; }
+    #contents > div[id*="start"] { text-align: left; padding: 7em 5em; }
+    #contents > div[id*="start"] > p { width: 48%; position: relative; }
+    #contents > div[id*="start"] > .img_cont { position: absolute;  left: 50%; top: 0%;}
+
+    /* 이메일 시작 부분 */
+    #email { padding: 8em 20%;}
+    #email > .l-font { width: 10em; margin: 0 auto;}
+    #email > .m-font { width: 25em; margin: 2rem auto;}
+
+    /* 질문 부분 */
+    #question { padding: 5em 20% 3em; }
+    #question > ul > li p { font-size: 1.4rem; }
+
+    /* footer */
+    footer { padding: 3em 15%; line-height: 2em; }
+    .foot_list > ul { width: 100%; margin: 0; padding: 0; }
+    .foot_list > ul > li { display: inline-block; width: 24.5%; }
 }
