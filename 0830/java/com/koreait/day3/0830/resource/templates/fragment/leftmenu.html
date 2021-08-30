@@ -1,0 +1,20 @@
+<html lang="ko"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org/">
+
+<!-- Menu -->
+<div class="menu" th:fragment="leftmenu(code, menuList)">
+    <ul class="list">
+        <li class="header">MAIN NAVIGATION</li>
+
+        <th:block th:each="entry : ${menuList}">
+            <li class="active">
+                <a th:href="${entry.url}">
+                    <i class="material-icons" th:text="${entry.img}"></i>
+                    <span th:text="${entry.title}"></span>
+                </a>
+            </li>
+        </th:block>
+    </ul>
+</div>
+<!-- #Menu -->
